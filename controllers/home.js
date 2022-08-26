@@ -1,9 +1,8 @@
 // procedures
-let getPosts = require("../procedures/procedurePosts");
+let procedureGetPosts = require("../procedures/procedureGetPosts");
 
 async function home(req, res) {
-  let posts = getPosts();
-  res.json(posts);
+  // ...
 }
 
 module.exports = {

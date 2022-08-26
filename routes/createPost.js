@@ -3,8 +3,8 @@ const express = require("express");
 const router = express.Router();
 
 // controllers
-let { create } = require("../controllers/create");
+let { createPost } = require("../controllers/createPost");
 
-router.get("/post/create", create);
+router.post("/post/create", createPost);
 
 module.exports = router;
