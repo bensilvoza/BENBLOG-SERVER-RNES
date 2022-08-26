@@ -1,11 +1,11 @@
-// libraries
-var express = require("express");
+// procedures
+let procedureDeletePost = require("../procedures/procedureDeletePost");
 
-async function home(req, res) {
-  var products = await Product.find({});
-  res.json(products);
+async function deletePost(req, res) {
+  procedureDeletePost();
+  res.json({ message: "OK" });
 }
 
 module.exports = {
-  home,
+  deletePost,
 };

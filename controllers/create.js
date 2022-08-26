@@ -1,11 +1,11 @@
-// libraries
-var express = require("express");
+// procedures
+let procedureCreatePost = require("../procedures/procedureCreate");
 
-async function home(req, res) {
-  var products = await Product.find({});
-  res.json(products);
+async function createPost(req, res) {
+  procedureCreatePost(req.body);
+  res.json({ message: "OK" });
 }
 
 module.exports = {
-  home,
+  createPost,
 };

@@ -1,16 +1,15 @@
 // libraries
 const express = require("express");
-const mysql = require("mysql");
 const cors = require("cors");
 
 // routes
 const home = require("./routes/home");
-const create = require("./routes/create");
-// const post = require("./routes/post");
-// const deletePost = require("./routes/delete");
+const login = require("./routes/login");
+const register = require("./routes/register");
+const createPost = require("./routes/createPost");
+const deletePost = require("./routes/deletePost");
 
-// use
-let app = express();
+const app = express();
 app.use(express.json());
 app.use(cors());
 
@@ -20,10 +19,11 @@ let db = require("./utils/shared/db");
 // connect db
 db.connect();
 
-// app.use(home);
-// app.use(post);
-app.use(create);
-// app.use(deletePost);
+app.use(home);
+app.use(login);
+app.use(register);
+app.use(createPost);
+app.use(deletePost);
 
 // port
 app.listen(process.env.PORT || 5000, function () {
