@@ -4,7 +4,7 @@ const mysql = require("mysql");
 const cors = require("cors");
 
 // routes
-// const home = require("./routes/home");
+const home = require("./routes/home");
 const create = require("./routes/create");
 // const post = require("./routes/post");
 // const deletePost = require("./routes/delete");
