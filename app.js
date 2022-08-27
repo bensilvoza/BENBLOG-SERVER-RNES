@@ -1,14 +1,9 @@
 // libraries
 const express = require("express");
 const cors = require("cors");
+require("dotenv").config();
 
-// routes
-const home = require("./routes/home");
-const login = require("./routes/login");
-const register = require("./routes/register");
-const createPost = require("./routes/createPost");
-const deletePost = require("./routes/deletePost");
-
+// use
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -18,6 +13,13 @@ let db = require("./utils/shared/db");
 
 // connect db
 db.connect();
+
+// routes
+const home = require("./routes/home");
+const login = require("./routes/login");
+const register = require("./routes/register");
+const createPost = require("./routes/createPost");
+const deletePost = require("./routes/deletePost");
 
 app.use(home);
 app.use(login);
