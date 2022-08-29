@@ -1,5 +1,5 @@
 // utils
-let db = require("../utils/shared/db");
+let db = require("../../utils/shared/db");
 
 function procedureGetPosts(req, res) {
   let sql = "SELECT * FROM post";

@@ -1,5 +1,5 @@
 // utils
-let db = require("../utils/shared/db");
+let db = require("../../utils/shared/db");
 
 function procedureDeletePost(req, res) {
   let postId = req.params.id;

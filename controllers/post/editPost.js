@@ -1,5 +1,5 @@
 // procedures
-let procedureEditPost = require("../procedures/procedureEditPost");
+let procedureEditPost = require("../../procedures/post/procedureEditPost");
 
 async function editPost(req, res) {
   procedureEditPost(req, res);

@@ -18,9 +18,9 @@ db.connect();
 const home = require("./routes/home");
 const login = require("./routes/login");
 const register = require("./routes/register");
-const createPost = require("./routes/createPost");
-const editPost = require("./routes/editPost");
-const deletePost = require("./routes/deletePost");
+const createPost = require("./routes/post/createPost");
+const editPost = require("./routes/post/editPost");
+const deletePost = require("./routes/post/deletePost");
 
 app.use(home);
 app.use(login);

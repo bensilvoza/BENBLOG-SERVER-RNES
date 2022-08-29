@@ -1,5 +1,5 @@
 // utils
-let db = require("../utils/shared/db");
+let db = require("../../utils/shared/db");
 
 function procedureCreatePost(req, res) {
   let sql = `

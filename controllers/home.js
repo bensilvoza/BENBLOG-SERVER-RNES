@@ -1,5 +1,5 @@
 // procedures
-let procedureGetPosts = require("../procedures/procedureGetPosts");
+let procedureGetPosts = require("../procedures/post/procedureGetPosts");
 
 async function home(req, res) {
   procedureGetPosts(req, res);
