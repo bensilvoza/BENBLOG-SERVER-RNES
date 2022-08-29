@@ -6,8 +6,8 @@ const router = express.Router();
 let verifyToken = require("../middleware/verifyToken");
 
 // controllers
-let { deletePost } = require("../controllers/deletePost");
+let { editPost } = require("../controllers/editPost");
 
-router.get("/post/delete/:id", verifyToken, deletePost);
+router.post("/post/edit/:id", verifyToken, editPost);
 
 module.exports = router;

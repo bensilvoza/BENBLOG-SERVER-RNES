@@ -1,5 +1,7 @@
 const jwt = require("jsonwebtoken");
 
+// verify the authorization token
+
 function verifyToken(req, res, next) {
   // FORMAT OF TOKEN
   // Authorization: "Bearer token"

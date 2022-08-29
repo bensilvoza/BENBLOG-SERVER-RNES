@@ -19,12 +19,14 @@ const home = require("./routes/home");
 const login = require("./routes/login");
 const register = require("./routes/register");
 const createPost = require("./routes/createPost");
+const editPost = require("./routes/editPost");
 const deletePost = require("./routes/deletePost");
 
 app.use(home);
 app.use(login);
 app.use(register);
 app.use(createPost);
+app.use(editPost);
 app.use(deletePost);
 
 // port

@@ -1,10 +1,11 @@
 // utils
 let db = require("../utils/shared/db");
 
-function procedureCreatePost(req, res) {
+function procedureEditPost(req, res) {
   let sql = `
-  INSERT INTO post
-  VALUES (?, ?, ?, ?, ?, ?)
+  UPDATE post
+  SET userId = ?, postId = ?, title = ?, dateCreated = ?, readTime = ?, description = ? 
+  WHERE postId = ?
   `;
 
   let post = req.body;
@@ -17,16 +18,17 @@ function procedureCreatePost(req, res) {
 
   db.query(
     sql,
-    [userId, postId, title, date, readTime, description],
+    [userId, postId, title, date, readTime, description, postId],
     function (error) {
       if (error) {
-        console.log(error);
         res.json({ message: "ERROR" });
       } else {
         res.json({ message: "OK" });
       }
     }
   );
+
+  return;
 }
 
-module.exports = procedureCreatePost;
+module.exports = procedureEditPost;
